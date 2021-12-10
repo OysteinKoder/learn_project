@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '@dnb/eufemia/style/basis';
+import '@dnb/eufemia/style/components';
+import '@dnb/eufemia/style/themes/ui';
 
 ReactDOM.render(
   <React.StrictMode>
