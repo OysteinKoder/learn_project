@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { CoinCard } from '../components/coinPage/Styles';
 
-export const CryptoPrint = () => {
+export const CoinPage = () => {
     const [coins, setCoins] = useState([])
 
     useEffect(() => {
@@ -19,10 +20,14 @@ export const CryptoPrint = () => {
         <div>
             {
                 coins.map(coin =>
-                    <ul key={coin.id}>
-                        <li>{coin.name}</li>
-                        <li>{coin.price_usd} </li>
-                    </ul>
+
+                    <CoinCard>
+                        <ul key={coin.id}>
+                            <li>{coin.name}</li>
+                            <li>({coin.symbol})</li>
+                            <li>{coin.price_usd} </li>
+                        </ul>
+                    </CoinCard>
                 )}
         </div>
     )

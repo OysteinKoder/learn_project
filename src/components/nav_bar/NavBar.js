@@ -1,15 +1,24 @@
 import React from 'react';
-import { NavContainer } from './styles';
-import { StyledTabs } from './styles';
+import { NavContainer, StyledTabs, Tab } from './styles';
+import { Tabs, Section } from '@dnb/eufemia';
+import { WalletPage } from '../../pages/WalletPage';
+import { CoinPage } from '../../pages/CoinPage'
+import { Link } from 'react-router-dom';
 
-export const NavBar = ()=> {
-const tabsData = [
-    {title: 'Trading', key: 'Trading'},
-    {title: 'Wallet', key:'Wallet'},
-]
-    return(
-<NavContainer>
-<StyledTabs data={tabsData} />
-</NavContainer>
+export const NavBar = () => {
+    return (
+        <Section aria-label="Navigation bar">
+            <NavContainer>
+                <Link to="/about">About</Link>
+                <Link to="/coins">Coins</Link>
+                <Link to="/wallet">Wallet</Link>
+            </NavContainer>
+        </Section>
     )
 }
+
+const tabData = [
+    { title: 'wallet', key: '/wallet' },
+    { title: 'about', key: '/about' },
+    { title: 'Coins', key: '/coins' },
+]

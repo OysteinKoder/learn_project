@@ -1,17 +1,28 @@
 import React from 'react';
-import { route, path } from 'react-dom'
 import './App.css';
-import { Button } from '@dnb/eufemia/components'
-import { CryptoPrint } from './pages/CryptoPrint';
+import { CoinPage } from './pages/CoinPage';
 import { NavBar } from './components/nav_bar/NavBar';
+import { StyledBody } from './components/body_holder/bodyStyles'
+import { WalletPage } from './pages/WalletPage';
+import { Router, Route, Routes, BrowserRouter } from 'react-router-dom';
+import reactDom from 'react-dom';
+import { AboutPage } from './pages/AboutPage';
+
 
 
 function App() {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <CryptoPrint/>
-    </div>
+    <StyledBody>
+    <BrowserRouter>
+      <NavBar />
+    <Routes>
+      <Route path="/wallet" element={<WalletPage/>}/>
+      <Route path="/about" element={<AboutPage/>}/>
+      <Route path="/coins" element={<CoinPage/>}/>
+      <Route path="*" element={<p>Not Found</p>}/>
+    </Routes>
+    </BrowserRouter>
+    </StyledBody>
   );
 }
 
