@@ -17,17 +17,17 @@ export const CoinPage = () => {
             )
             .catch(() => { console.log('err') })
     }, [])
+    
     useEffect(() => {
-    store.dispatch(getCoins( ))
-},[])
-const cryptoData = useSelector(state => state.coins.coins.data)
-console.log(cryptoData)
+        store.dispatch(getCoins())
+    }, [])
+    const cryptoData = useSelector(state => state.coins.coins.data)
+    console.log(cryptoData)
 
     return (
         <div>
             {
                 coins.map(coin =>
-
                     <CoinCard>
                         <ul key={coin.id}>
                             <li>{coin.name}</li>

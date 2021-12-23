@@ -6,4 +6,6 @@ Todo:
 [√] Set up pathing 13.12.21
 
 [√] console.log data about coins from the redux call 23.12
+[√] Make a reducer setup that handles if the user is loggedIn or not.
+[ ] Make a reducer setup that handles wallet information
 [ ] get redux state to render data instead of normal api call. 
