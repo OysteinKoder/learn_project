@@ -1,7 +1,7 @@
 import { GET_COINS_DATA, COINS_DATA_ERROR } from "../types";
 import axios from 'axios';
 
-export const getUsers = () => async dispatch => {
+export const getCoins = () => async dispatch => {
     try{
         const res = await axios.get('https://api.coinlore.net/api/tickers/')
         dispatch({

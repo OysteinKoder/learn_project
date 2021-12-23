@@ -2,6 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CoinCard } from '../components/coinPage/Styles';
+import { getCoins } from '../redux/actions/coinsActions';
+import { render } from '@testing-library/react';
+import { useSelector } from 'react-redux'
+import { store } from '../redux/store';
 
 export const CoinPage = () => {
     const [coins, setCoins] = useState([])
@@ -13,8 +17,11 @@ export const CoinPage = () => {
             )
             .catch(() => { console.log('err') })
     }, [])
-
-    console.log(coins)
+    useEffect(() => {
+    store.dispatch(getCoins( ))
+},[])
+const cryptoData = useSelector(state => state.coins.coins.data)
+console.log(cryptoData)
 
     return (
         <div>
