@@ -1,12 +1,9 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useEffect } from 'react';
 import { CoinCard } from '../components/coinPage/Styles';
 import { getCoins } from '../redux/actions/coinsActions';
-import { render } from '@testing-library/react';
 import { useSelector } from 'react-redux'
 import { store } from '../redux/store';
-import { BUY_BTC } from '../redux/types';
 import { getBtcValue } from '../redux/actions/walletActions';
 
 export const CoinPage = () => {
