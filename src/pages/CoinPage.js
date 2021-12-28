@@ -6,6 +6,8 @@ import { getCoins } from '../redux/actions/coinsActions';
 import { render } from '@testing-library/react';
 import { useSelector } from 'react-redux'
 import { store } from '../redux/store';
+import { BUY_BTC } from '../redux/types';
+import { getBtcValue } from '../redux/actions/walletActions';
 
 export const CoinPage = () => {
     const [coins, setCoins] = useState([])
@@ -17,15 +19,26 @@ export const CoinPage = () => {
             )
             .catch(() => { console.log('err') })
     }, [])
-    
+
     useEffect(() => {
         store.dispatch(getCoins())
     }, [])
     const cryptoData = useSelector(state => state.coins.coins.data)
-    console.log(cryptoData)
+    console.log(cryptoData);
+    let currentState = store.getState();
+    currentState.loading = false;
+    
+    const BtcValue = () => {
+        store.dispatch(getBtcValue())
+    }
+    
 
     return (
         <div>
+        <button onClick={
+            BtcValue
+        }
+        >click</button>
             {
                 coins.map(coin =>
                     <CoinCard>
