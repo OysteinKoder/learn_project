@@ -9,6 +9,12 @@ Todo:
 [√] Make a reducer setup that handles if the user is loggedIn or not. 23.12.2021
 
 [√]  Learned a little about store.getState() method 27.12.2021
-[ ] Make a reducer setup that handles wallet information 
-[√] make the api call once and not getting two "undefined"
-[√] get redux state to render data instead of normal api call. 
+[√] Start work on reducer that handles wallet information. 28.12.2021
+[√] Make the reducer do a trade, and update wallet info
+[√] make the api call once and not getting two "undefined" 28.12.2021
+[√] get redux state to render data instead of normal api call.  28.12.2021
+
+Next steps: 
+[ ] make the wallet reducer handle buy/sell orders for selected coins
+[ ] Remove unused "coins" from coins page.
+[ ] Add buttons with buy / sell for each coin.
