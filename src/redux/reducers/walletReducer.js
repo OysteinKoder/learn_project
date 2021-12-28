@@ -4,7 +4,7 @@ import { store } from "../store";
 
 
 const initialWallet = {
-    USD: 1000,
+    USD: 1000000,
     BTC: null,
     ETH: null,
     DOGE: null,
@@ -17,7 +17,8 @@ export default function (state = initialWallet, action) {
         case BUY_BTC:
             return {
                 ...state, 
-                BTC: action.payload 
+                BTC: initialWallet.USD / action.payload,
+                USD: 0
             }
             default: return state
     }
