@@ -10,45 +10,39 @@ import { BUY_BTC } from '../redux/types';
 import { getBtcValue } from '../redux/actions/walletActions';
 
 export const CoinPage = () => {
-    const [coins, setCoins] = useState([])
-
-    useEffect(() => {
-        axios.get('https://api.coinlore.net/api/tickers/')
-            .then(res =>
-                setCoins(res.data.data)
-            )
-            .catch(() => { console.log('err') })
-    }, [])
-
     useEffect(() => {
         store.dispatch(getCoins())
     }, [])
     const cryptoData = useSelector(state => state.coins.coins.data)
-    console.log(cryptoData);
-    let currentState = store.getState();
-    currentState.loading = false;
-    
     const BtcValue = () => {
         store.dispatch(getBtcValue())
     }
-    
-
-    return (
-        <div>
-        <button onClick={
-            BtcValue
-        }
-        >click</button>
-            {
-                coins.map(coin =>
-                    <CoinCard>
-                        <ul key={coin.id}>
-                            <li>{coin.name}</li>
-                            <li>({coin.symbol})</li>
-                            <li>{coin.price_usd} </li>
-                        </ul>
-                    </CoinCard>
-                )}
-        </div>
-    )
+    if (cryptoData) {
+        console.log(cryptoData);
+        return (
+            <div>
+                <button onClick={
+                    BtcValue
+                }
+                >click</button>
+                {
+                    cryptoData.map(coin =>
+                        <CoinCard>
+                            <ul key={coin.id}>
+                                <li>{coin.name}</li>
+                                <li>({coin.symbol})</li>
+                                <li>{coin.price_usd} </li>
+                            </ul>
+                        </CoinCard>
+                    )}
+            </div>
+        )
+    }
+    else {
+        return (
+            <div>
+                loading
+            </div>
+        )
+    }
 }

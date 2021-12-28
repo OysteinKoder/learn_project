@@ -8,7 +8,7 @@ Todo:
 [√] console.log data about coins from the redux call 23.12.2021
 [√] Make a reducer setup that handles if the user is loggedIn or not. 23.12.2021
 
-[]  Learned a little about store.getState() method 27.12.2021
+[√]  Learned a little about store.getState() method 27.12.2021
 [ ] Make a reducer setup that handles wallet information 
-[ ] make the api call once and not getting two "undefined"
-[ ] get redux state to render data instead of normal api call. 
+[√] make the api call once and not getting two "undefined"
+[√] get redux state to render data instead of normal api call. 
