@@ -6,5 +6,5 @@ import walletReducer from "./walletReducer";
 export default combineReducers({
     coins: coinReducers,
     loggedIn: loggedInReducer,
-    BTC_VALUE: walletReducer
+    wallet: walletReducer
 })
