@@ -1,15 +1,14 @@
 import {
-    IS_LOGGED_IN,
-    IS_LOGGED_OUT
+    TOGGLE_LOGIN,
 } from '../types'
 
 
 
 export default function (state = false, action) {
-    switch(action.type) {
-        case IS_LOGGED_IN:
+    switch (action.type) {
+        case TOGGLE_LOGIN:
             return !state;
-            default:
-                return state;
+        default:
+            return state;
     }
 }
