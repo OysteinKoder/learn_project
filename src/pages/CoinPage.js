@@ -1,35 +1,46 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { CoinCard } from '../components/coinPage/Styles';
-import { getCoins } from '../redux/actions/coinsActions';
-import { useSelector } from 'react-redux'
+import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
+import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
-import { getBtcValue } from '../redux/actions/walletActions';
+import { buyBtc } from '../redux/actions/walletActions';
+import { Button, Li, Ul } from '@dnb/eufemia';
 
 export const CoinPage = () => {
     useEffect(() => {
-        store.dispatch(getCoins())
+        store.dispatch(cleanState())
+        store.dispatch(getUsd())
+        store.dispatch(getBtc())
+        store.dispatch(getEth())
+        store.dispatch(getDoge())
+        store.dispatch(getBnb())
     }, [])
-    const cryptoData = useSelector(state => state.coins.coins.data)
+
+    const cryptoData = useSelector(state => state.coins.coins);
+
+
     const BtcValue = () => {
-        store.dispatch(getBtcValue())
+        store.dispatch(buyBtc())
     }
     if (cryptoData) {
         console.log(cryptoData);
         return (
             <div>
-                <button onClick={
+                <Button onClick={
                     BtcValue
                 }
-                >click</button>
+                >click</Button>
                 {
                     cryptoData.map(coin =>
                         <CoinCard>
-                            <ul key={coin.id}>
-                                <li>{coin.name}</li>
-                                <li>({coin.symbol})</li>
-                                <li>{coin.price_usd} </li>
-                            </ul>
+                            <Ul key={coin.id}>
+                                <Li className="dnb-ul dnb-unstyled-list">{coin.name}</Li>
+                                <Li className="dnb-ul dnb-unstyled-list">({coin.symbol})</Li>
+                                <Li className="dnb-ul dnb-unstyled-list">{coin.price_usd} </Li>
+                            </Ul>
+                            <Button>Buy</Button>
+                            <Button>Sell</Button>
                         </CoinCard>
                     )}
             </div>
