@@ -1,5 +1,7 @@
 export const GET_COINS_DATA = 'GET_COINS_DATA';
+
 export const DATA_ERROR = 'DATA_ERROR';
+export const CLEAN_STATE = 'CLEAN_STATE'
 
 export const TOGGLE_LOGIN = 'TOGGLE_LOGIN';
 export const IS_LOGGED_OUT = 'IS_LOGGED_OUT';
