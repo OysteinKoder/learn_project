@@ -1,7 +1,7 @@
 import { store } from "../store"
 import { BUY_BTC, DATA_ERROR } from "../types"
 
-export const getBtcValue = () => async dispatch => {
+export const buyBtc = () => async dispatch => {
     try {
         const res = await store.getState().coins.coins.data[0].price_usd
         dispatch({
@@ -16,3 +16,9 @@ export const getBtcValue = () => async dispatch => {
         })
     }
 }
+
+// export const sellBtc => () => async dispatch => {
+//     try {
+//         const res = await store.getState.coins.c
+//     }
+// }
