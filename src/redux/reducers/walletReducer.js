@@ -1,5 +1,8 @@
-import { BUY_BTC } from "../types";
-import { SELL_BTC } from "../types";
+import { 
+    BUY_BTC,
+    GET_USD_DATA,
+    SELL_BTC 
+} from "../types";
 import { store } from "../store";
 
 
@@ -20,6 +23,11 @@ export default function (state = initialWallet, action) {
                 BTC: initialWallet.USD / action.payload,
                 USD: 0
             }
+        // case SELL_BTC: 
+        // return {
+        //     ...state,
+        //     USD: initialWallet.BTC * 
+        // }
             default: return state
     }
 }
