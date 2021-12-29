@@ -6,8 +6,10 @@ GET_ETH_DATA,
 GET_DOGE_DATA,
 GET_BNB_DATA,
 GET_USD_DATA,
+CLEAN_STATE,
  } from "../types";
 import axios from 'axios';
+import { initialState } from "../reducers/coinReducers";
 
 export const getCoins = () => async dispatch => {
     try {
@@ -104,3 +106,8 @@ export const getBnb = () => async dispatch => {
         })
     }
 }
+
+export const cleanState = () => ({
+    type: CLEAN_STATE,
+    payload: initialState
+})
