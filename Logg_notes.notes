@@ -2,6 +2,7 @@ Api reference: https://www.coinlore.com/cryptocurrency-data-api?ref=apilist.fun
 
 
 Todo:
+Finished:
 [√] Console log data 13.12.21
 [√] Set up pathing 13.12.21
 
@@ -14,7 +15,12 @@ Todo:
 [√] make the api call once and not getting two "undefined" 28.12.2021
 [√] get redux state to render data instead of normal api call.  28.12.2021
 
-Next steps: 
+[√] Remove unused "coins" from coins page. 29.12.2021
+[√] coins render based on coin-spesific api calls through redux 29.12.2021
+[√] Add dummy buttons with buy / sell for each coin. 29.12.2021
+
+Next:
+[ ] render coins in spesific order instead of random
 [ ] make the wallet reducer handle buy/sell orders for selected coins
-[ ] Remove unused "coins" from coins page.
-[ ] Add buttons with buy / sell for each coin.
+[ ] make the buttons handle buy sell orders
+[ ] learn about caching, see if i can make it remember state for wallet
