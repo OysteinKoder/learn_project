@@ -1,5 +1,6 @@
 Api reference: https://www.coinlore.com/cryptocurrency-data-api?ref=apilist.fun
 
+Figma design: https://www.figma.com/file/qskA9Om63wmyb7BQHTA3xN/Untitled?node-id=0%3A1
 
 Todo:
 Finished:
@@ -18,8 +19,14 @@ Finished:
 [√] Remove unused "coins" from coins page. 29.12.2021
 [√] coins render based on coin-spesific api calls through redux 29.12.2021
 [√] Add dummy buttons with buy / sell for each coin. 29.12.2021
+[x] update dependecies for security (failed, eufemia imports would not work anymore) 02.01.2022
+[√] make figma design for trade page 02.01.2022
+[√] work on styling for coins/trade page 02.01.2022
 
 Next:
+[ ] make figma design for wallet page
+[ ] make figma design for about page 
+[ ] make every other coincard have different background color 
 [ ] render coins in spesific order instead of random
 [ ] make the wallet reducer handle buy/sell orders for selected coins
 [ ] make the buttons handle buy sell orders

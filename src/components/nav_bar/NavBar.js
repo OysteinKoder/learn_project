@@ -1,19 +1,24 @@
 import React from 'react';
-import { NavContainer, StyledTabs, Tab } from './styles';
-import { Tabs, Section } from '@dnb/eufemia';
+import { NavContainer, StyledTabs, Tab, StyledSection, StyledAnchor  } from './styles';
+import { Tabs, Section, Anchor } from '@dnb/eufemia';
 import { WalletPage } from '../../pages/WalletPage';
 import { CoinPage } from '../../pages/CoinPage'
 import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
     return (
-        <Section aria-label="Navigation bar">
             <NavContainer>
-                <Link to="/about">About</Link>
-                <Link to="/coins">Coins</Link>
-                <Link to="/wallet">Wallet</Link>
+                <StyledAnchor 
+                 to="/about"
+                 >About</StyledAnchor>
+                <StyledAnchor 
+                
+                 to="/coins"
+                 >Coins</StyledAnchor>
+                <StyledAnchor 
+                 to="/wallet"
+                 >Wallet</StyledAnchor>
             </NavContainer>
-        </Section>
     )
 }
 

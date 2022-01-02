@@ -8,4 +8,5 @@ border-radius: 25px;
 margin: auto;
 margin-top: 10rem;
 text-align: center;
+overflow: hidden;
 `

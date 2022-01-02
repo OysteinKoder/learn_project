@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { CoinCard } from '../components/coinPage/Styles';
+import { CoinCard, Btn } from '../components/coinPage/Styles';
 import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
 import { buyBtc } from '../redux/actions/walletActions';
-import { Button, Li, Ul } from '@dnb/eufemia';
+import { Button, Input, InputMasked, Li, Ul } from '@dnb/eufemia';
 
 export const CoinPage = () => {
     useEffect(() => {
@@ -27,20 +27,28 @@ export const CoinPage = () => {
         console.log(cryptoData);
         return (
             <div>
-                <Button onClick={
+                {/* <Button onClick={
                     BtcValue
                 }
-                >click</Button>
+                >click</Button> */}
                 {
-                    cryptoData.map(coin =>
+                    cryptoData.map((coin, idx) =>
                         <CoinCard>
-                            <Ul key={coin.id}>
-                                <Li className="dnb-ul dnb-unstyled-list">{coin.name}</Li>
-                                <Li className="dnb-ul dnb-unstyled-list">({coin.symbol})</Li>
-                                <Li className="dnb-ul dnb-unstyled-list">{coin.price_usd} </Li>
+                            <Ul key={coin.id} >
+                                <Li className="dnb-ul dnb-unstyled-list" >{coin.name}</Li>
+                                <Li className="dnb-ul dnb-unstyled-list" >({coin.symbol})</Li>
+                                <Li className="dnb-ul dnb-unstyled-list" >{coin.price_usd} </Li>
                             </Ul>
-                            <Button>Buy</Button>
-                            <Button>Sell</Button>
+                            <div>
+                            <Button space="small">Buy</Button>
+                            <InputMasked
+                            as_currency="USD" />
+                            </div>
+                            <div>
+                            <Button space="small">Sell</Button>
+                            <InputMasked
+                            as_currency="USD" />
+                            </div>
                         </CoinCard>
                     )}
             </div>
