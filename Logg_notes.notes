@@ -22,8 +22,10 @@ Finished:
 [x] update dependecies for security (failed, eufemia imports would not work anymore) 02.01.2022
 [√] make figma design for trade page 02.01.2022
 [√] work on styling for coins/trade page 02.01.2022
+[√] fixed git error 
 
 Next:
+[ ] make github host project as website 
 [ ] make figma design for wallet page
 [ ] make figma design for about page 
 [ ] make every other coincard have different background color 
