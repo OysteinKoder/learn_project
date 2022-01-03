@@ -40,6 +40,10 @@ export const AboutPage = () => (
 <Ul>
 <H3>Finished</H3>
 <H4>03.01.2022</H4>
+<Li>[√] Added headline</Li>
+<Li>[√] Added descriptive text to about page</Li>
+<Li>[√] Added my "internal" log to the about page and styled it</Li>
+<Li>[√] Made default / redirect route be the about page</Li>
 <Li>[√] fixed git error </Li>
 <Li>[√] make github host project as website </Li>
 <Li>[√] removed a bunch of console errors</Li>
