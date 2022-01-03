@@ -23,9 +23,10 @@ Finished:
 [√] make figma design for trade page 02.01.2022
 [√] work on styling for coins/trade page 02.01.2022
 [√] fixed git error 
+[√] make github host project as website 03.01.2022
+[√] removed a bunch of console errors
 
 Next:
-[ ] make github host project as website 
 [ ] make figma design for wallet page
 [ ] make figma design for about page 
 [ ] make every other coincard have different background color 
@@ -33,5 +34,3 @@ Next:
 [ ] make the wallet reducer handle buy/sell orders for selected coins
 [ ] make the buttons handle buy sell orders
 [ ] learn about caching, see if i can make it remember state for wallet
-
-text for git check
