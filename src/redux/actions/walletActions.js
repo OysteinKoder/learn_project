@@ -1,5 +1,14 @@
 import { store } from "../store"
-import { BUY_BTC, SELL_BTC, BUY_ETH, DATA_ERROR } from "../types"
+import { 
+    BUY_BTC, 
+    SELL_BTC, 
+    BUY_ETH, 
+    SELL_ETH,
+    BUY_DOGE,
+    SELL_DOGE,
+    BUY_BNB,
+    SELL_BNB
+} from "../types"
 
 export const buyBtc = () => {
     return (
@@ -21,8 +30,6 @@ export const sellBtc = () => {
     )
 }
 
-
-
 export const buyEth = () => {
     return (
         {
@@ -32,24 +39,47 @@ export const buyEth = () => {
     )
 }
 
-// export const sellBtc => () => async dispatch => {
-//     try {
-//         const res = await store.getState.coins.c
-//     }
-// }
+export const sellEth = () => {
+    return (
+        {
+            type: SELL_ETH,
+            payload: store.getState().coins.coins[2].price_usd
+        }
+    )
+}
 
-// export const buyBtc = () => async dispatch => {
-//     try {
-//         const res = await store.getState().coins.coins.data[9].price_usd
-//         dispatch({
-//             type: BUY_BTC,
-//             payload: res
-//         })
-//     }
-//     catch (e) {
-//         dispatch({
-//             type: DATA_ERROR,
-//             payload: console.log(e)
-//         })
-//     }
-// }
+export const buyDoge = () => {
+    return (
+        {
+            type: BUY_DOGE,
+            payload: store.getState().coins.coins[3].price_usd
+        }
+    )
+}
+
+export const sellDoge = () => {
+    return (
+        {
+            type: SELL_DOGE,
+            payload: store.getState().coins.coins[3].price_usd
+        }
+    )
+}
+
+export const buyBnb = () => {
+    return (
+        {
+            type: BUY_BNB,
+            payload: store.getState().coins.coins[4].price_usd
+        }
+    )
+}
+
+export const sellBnb = () => {
+    return (
+        {
+            type: SELL_BNB,
+            payload: store.getState().coins.coins[4].price_usd
+        }
+    )
+}

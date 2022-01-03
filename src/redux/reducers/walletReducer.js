@@ -1,6 +1,12 @@
-import { 
+import {
     BUY_BTC,
-    SELL_BTC 
+    SELL_BTC,
+    BUY_ETH,
+    SELL_ETH,
+    BUY_DOGE,
+    SELL_DOGE,
+    BUY_BNB,
+    SELL_BNB
 } from "../types";
 
 const initialWallet = {
@@ -12,21 +18,57 @@ const initialWallet = {
 }
 
 export default function (state = initialWallet, action) {
-    
+
     switch (action.type) {
         case BUY_BTC:
             return {
-                ...state, 
+                ...state,
                 BTC: state.USD / action.payload,
                 USD: 0
             }
-        case SELL_BTC: 
+        case SELL_BTC:
+            return {
+                ...state,
+                USD: state.BTC * action.payload,
+                BTC: 0
+            }
+        case BUY_ETH:
+            return {
+                ...state,
+                ETH: state.USD / action.payload,
+                USD: 0
+            }
+        case SELL_ETH:
+            return {
+                ...state,
+                USD: state.ETH * action.payload,
+                ETH: 0
+            }
+        case BUY_DOGE: 
         return {
             ...state,
-            USD: state.BTC * action.payload,
-            BTC: 0
+            DOGE: state.USD / action.payload,
+            USD: 0
         }
-            default: return state
+        case SELL_DOGE: 
+        return {
+            ...state,
+            USD: state.DOGE * action.payload,
+            DOGE: 0
+        }
+        case BUY_BNB: 
+        return{
+            ...state,
+            BNB: state.USD / action.payload,
+            USD: 0
+        }
+        case SELL_BNB:
+            return{
+                ...state,
+                USD: state.BNB * action.payload,
+                BNB: 0
+            }
+        default: return state
     }
 }
 
