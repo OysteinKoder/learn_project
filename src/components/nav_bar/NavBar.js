@@ -1,8 +1,12 @@
 import React from 'react';
-import { NavContainer, StyledAnchor  } from './styles';
+import { NavContainer, StyledAnchor, NavFlex, StyledH1  } from './styles';
+import { H1 } from '@dnb/eufemia';
 export const NavBar = () => {
     return (
             <NavContainer>
+                <StyledH1
+                 >Fantasy Crypto</StyledH1>
+<NavFlex>
                 <StyledAnchor 
                  to="/about"
                  >About</StyledAnchor>
@@ -13,6 +17,7 @@ export const NavBar = () => {
                 <StyledAnchor 
                  to="/wallet"
                  >Wallet</StyledAnchor>
+                 </NavFlex>
             </NavContainer>
     )
 }

@@ -1,16 +1,23 @@
 import Styled from "styled-components";
-import { Section } from '@dnb/eufemia';
+import { H1, Section } from '@dnb/eufemia';
 import { Link } from "react-router-dom";
 
+export const StyledH1 = Styled(H1)`
+color: var(--color-mint-green);
+padding: 1rem !important;
+`;
+
 export const NavContainer = Styled.div`
-margin: auto;
-display: flex;
-justify-content: space-evenly;
 background-color: var(--color-sea-green);
 width: 100%;
 height: 100%;
-
 `;
+
+export const NavFlex = Styled.div`
+margin: auto;
+display: flex;
+justify-content: space-evenly;
+`
 
 export const StyledTabs = Styled.div`
 display: flex;

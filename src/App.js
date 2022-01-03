@@ -6,11 +6,13 @@ import { StyledBody } from './components/body_holder/bodyStyles'
 import { WalletPage } from './pages/WalletPage';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { AboutPage } from './pages/AboutPage';
+import { H1 } from '@dnb/eufemia';
 
 
 
 function App() {
   return (
+    
     <StyledBody>
     <BrowserRouter>
       <NavBar />
@@ -18,10 +20,11 @@ function App() {
       <Route path="/wallet" element={<WalletPage/>}/>
       <Route path="/about" element={<AboutPage/>}/>
       <Route path="/coins" element={<CoinPage/>}/>
-      <Route path="*" element={<p>Not Found</p>}/>
+      <Route path="*" element={<AboutPage/>}/>
     </Routes>
     </BrowserRouter>
     </StyledBody>
+    
   );
 }
 

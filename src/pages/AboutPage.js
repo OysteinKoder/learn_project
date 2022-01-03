@@ -5,6 +5,21 @@ import { WalletCard } from '../components/walletPage/styles.js'
 export const AboutPage = () => (
     <Section aria-label="About Page">
         <WalletCard>
+            <H2>About</H2>
+            <p>Fantasy crypto is an app that lets you buy and sell four different crypto-coins for fun using fake monopoly money.
+                <br></br>
+                The app is under development and might not work as intended yet.
+            </p>
+            <p>The purpose with this app is to learn more about:
+                <Ul>
+                    <Li>Api's</Li>
+                    <Li>Redux</Li>
+                    <Li>React Router</Li>
+                    <Li>Dnb's css eufemia liberary</Li>
+                </Ul>
+            </p>
+        </WalletCard>
+        <WalletCard>
 <H2>Log</H2>
 <br></br>
 </WalletCard>
