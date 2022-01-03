@@ -8,4 +8,6 @@ margin: auto;
 margin-top: 10rem;
 text-align: center;
 overflow: hidden;
+margin-bottom: 2.5rem;
+margin-top: 2.5rem;
 `
