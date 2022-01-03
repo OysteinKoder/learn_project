@@ -26,11 +26,11 @@ export const AboutPage = () => (
 <WalletCard>
 <Ul>
 <H3>ToDo</H3>
-<Li>[ ] make figma design for wallet page </Li>
-<Li>[ ] make every other coincard have different background color  </Li>
-<Li>[ ] make the wallet reducer handle buy/sell orders for selected coins </Li>
-<Li>[ ] make the buttons handle buy sell orders </Li>
+<Li>[ ] Make figma design for wallet page </Li>
+<Li>[ ] Make every other coincard have different background color  </Li>
 <Li>[ ] learn about caching, see if i can make it remember state for wallet </Li>
+<Li>[ ] Make the wallet reducer handle buy/sell orders for selected coins </Li>
+<Li>[ ] implement the simple buy sell order on other coins </Li>
 <br></br>
 </Ul>
 </WalletCard>
@@ -39,6 +39,7 @@ export const AboutPage = () => (
 <Ul>
 <H3>Finished</H3>
 <H4>03.01.2022</H4>
+<Li>[√] buttons on Btc now handles simplified buy/sell orders, uses all currency </Li>
 <Li>[√] render coins in spesific order instead of random </Li>
 <Li>[√] Added headline</Li>
 <Li>[√] Added descriptive text to about page</Li>
