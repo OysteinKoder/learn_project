@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/learn_project/static/css/main.eab24d3c.chunk.css",
-    "main.js": "/learn_project/static/js/main.c9751f52.chunk.js",
-    "main.js.map": "/learn_project/static/js/main.c9751f52.chunk.js.map",
-    "runtime-main.js": "/learn_project/static/js/runtime-main.e2677bec.js",
-    "runtime-main.js.map": "/learn_project/static/js/runtime-main.e2677bec.js.map",
+    "main.js": "/learn_project/static/js/main.300ff760.chunk.js",
+    "main.js.map": "/learn_project/static/js/main.300ff760.chunk.js.map",
+    "runtime-main.js": "/learn_project/static/js/runtime-main.8375c541.js",
+    "runtime-main.js.map": "/learn_project/static/js/runtime-main.8375c541.js.map",
     "static/css/2.ca3a22af.chunk.css": "/learn_project/static/css/2.ca3a22af.chunk.css",
-    "static/js/2.3c3a697d.chunk.js": "/learn_project/static/js/2.3c3a697d.chunk.js",
-    "static/js/2.3c3a697d.chunk.js.map": "/learn_project/static/js/2.3c3a697d.chunk.js.map",
-    "static/js/3.5f089dd1.chunk.js": "/learn_project/static/js/3.5f089dd1.chunk.js",
-    "static/js/3.5f089dd1.chunk.js.map": "/learn_project/static/js/3.5f089dd1.chunk.js.map",
+    "static/js/2.af79baec.chunk.js": "/learn_project/static/js/2.af79baec.chunk.js",
+    "static/js/2.af79baec.chunk.js.map": "/learn_project/static/js/2.af79baec.chunk.js.map",
+    "static/js/3.b0e7d3e4.chunk.js": "/learn_project/static/js/3.b0e7d3e4.chunk.js",
+    "static/js/3.b0e7d3e4.chunk.js.map": "/learn_project/static/js/3.b0e7d3e4.chunk.js.map",
     "index.html": "/learn_project/index.html",
-    "precache-manifest.b2a70d163005c625f419ad4492f3ffb0.js": "/learn_project/precache-manifest.b2a70d163005c625f419ad4492f3ffb0.js",
+    "precache-manifest.9b5f8a2f1fe7858964ee407d87a59727.js": "/learn_project/precache-manifest.9b5f8a2f1fe7858964ee407d87a59727.js",
     "service-worker.js": "/learn_project/service-worker.js",
     "static/css/2.ca3a22af.chunk.css.map": "/learn_project/static/css/2.ca3a22af.chunk.css.map",
     "static/css/main.eab24d3c.chunk.css.map": "/learn_project/static/css/main.eab24d3c.chunk.css.map",
@@ -19,10 +19,10 @@
     "static/media/dnb-ui-components.min.css": "/learn_project/static/media/DNBMono-Skeleton-Regular.af6be20d.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.e2677bec.js",
+    "static/js/runtime-main.8375c541.js",
     "static/css/2.ca3a22af.chunk.css",
-    "static/js/2.3c3a697d.chunk.js",
+    "static/js/2.af79baec.chunk.js",
     "static/css/main.eab24d3c.chunk.css",
-    "static/js/main.c9751f52.chunk.js"
+    "static/js/main.300ff760.chunk.js"
   ]
 }
