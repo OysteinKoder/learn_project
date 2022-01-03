@@ -4,8 +4,7 @@ import { CoinPage } from './pages/CoinPage';
 import { NavBar } from './components/nav_bar/NavBar';
 import { StyledBody } from './components/body_holder/bodyStyles'
 import { WalletPage } from './pages/WalletPage';
-import { Router, Route, Routes, BrowserRouter } from 'react-router-dom';
-import reactDom from 'react-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { AboutPage } from './pages/AboutPage';
 
 

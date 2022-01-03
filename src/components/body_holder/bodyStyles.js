@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import styles from "../nav_bar/styles";
 
 export const StyledBody = styled.div`
 width: 60%;

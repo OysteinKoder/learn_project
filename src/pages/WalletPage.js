@@ -1,16 +1,16 @@
 import React from 'react';
-import { store } from '../redux/store';
 import { useSelector } from 'react-redux';
+import { WalletCard } from '../components/walletPage/styles';
 
 export const WalletPage = () => {
     const currentWallet = useSelector(state => state.wallet)
     if (currentWallet) 
     {return(
         <div>
-    <p>USD:${currentWallet.USD}</p>
-    <p>BTC: {currentWallet.BTC}</p>
-    <p>ETH: {currentWallet.ETH}</p>
-    <p>DOGE:{currentWallet.DOGE}</p>
-    <p>BNB: {currentWallet.BNB}</p>
-    </div>
+    <WalletCard> <p>USD:${currentWallet.USD}</p> </WalletCard>
+    <WalletCard> <p>BTC: {currentWallet.BTC} coins</p> </WalletCard>
+    <WalletCard> <p>ETH: {currentWallet.ETH} coins</p> </WalletCard>
+    <WalletCard> <p>DOGE:{currentWallet.DOGE} coins</p> </WalletCard>
+    <WalletCard> <p>BNB: {currentWallet.BNB} coins</p> </WalletCard>
+       </div>
 )}}

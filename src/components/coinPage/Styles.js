@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Button } from "@dnb/eufemia";
 
 export const CoinCard = styled.div`
 display: grid;

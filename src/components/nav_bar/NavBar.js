@@ -1,10 +1,5 @@
 import React from 'react';
-import { NavContainer, StyledTabs, Tab, StyledSection, StyledAnchor  } from './styles';
-import { Tabs, Section, Anchor } from '@dnb/eufemia';
-import { WalletPage } from '../../pages/WalletPage';
-import { CoinPage } from '../../pages/CoinPage'
-import { Link } from 'react-router-dom';
-
+import { NavContainer, StyledAnchor  } from './styles';
 export const NavBar = () => {
     return (
             <NavContainer>
@@ -21,7 +16,7 @@ export const NavBar = () => {
             </NavContainer>
     )
 }
-
+// eslint-disable-next-line
 const tabData = [
     { title: 'wallet', key: '/wallet' },
     { title: 'about', key: '/about' },

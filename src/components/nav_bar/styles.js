@@ -1,5 +1,5 @@
 import Styled from "styled-components";
-import { Anchor, Section, Tabs } from '@dnb/eufemia';
+import { Section } from '@dnb/eufemia';
 import { Link } from "react-router-dom";
 
 export const NavContainer = Styled.div`

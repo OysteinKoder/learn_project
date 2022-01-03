@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { CoinCard, Btn } from '../components/coinPage/Styles';
+import { CoinCard, } from '../components/coinPage/Styles';
 import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
 import { buyBtc } from '../redux/actions/walletActions';
-import { Button, Input, InputMasked, Li, Ul } from '@dnb/eufemia';
+import { Button, InputMasked, Li, Ul } from '@dnb/eufemia';
 
 export const CoinPage = () => {
     useEffect(() => {
@@ -35,12 +35,12 @@ export const CoinPage = () => {
                     cryptoData.map((coin, idx) =>
                         <CoinCard>
                             <Ul key={coin.id} >
-                                <Li className="dnb-ul dnb-unstyled-list" >{coin.name}</Li>
-                                <Li className="dnb-ul dnb-unstyled-list" >({coin.symbol})</Li>
-                                <Li className="dnb-ul dnb-unstyled-list" >{coin.price_usd} </Li>
+                                <Li key={coin.name} className="dnb-ul dnb-unstyled-list" >{coin.name}</Li>
+                                <Li key={coin.symbol} className="dnb-ul dnb-unstyled-list" >({coin.symbol})</Li>
+                                <Li key={coin.rank} className="dnb-ul dnb-unstyled-list" >{coin.price_usd} </Li>
                             </Ul>
                             <div>
-                            <Button space="small">Buy</Button>
+                            <Button space="small" onClick={BtcValue}>Buy</Button>
                             <InputMasked
                             as_currency="USD" />
                             </div>

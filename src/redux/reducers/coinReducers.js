@@ -1,4 +1,3 @@
-import { init } from "i18n";
 import { 
     GET_COINS_DATA,
     GET_USD_DATA,
@@ -41,12 +40,7 @@ export default function (state = initialState, action){
                 coins: state.coins.concat(action.payload),
                 loading: !loadingState
             }
-        case GET_ETH_DATA:
-            return{
-                ...state,
-            coins: state.coins.concat(action.payload),
-            loading: !loadingState
-        }
+        
         case GET_DOGE_DATA: 
             return {
                 ...state,
