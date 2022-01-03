@@ -4,25 +4,25 @@ import { CoinCard, } from '../components/coinPage/Styles';
 import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
-import { buyBtc } from '../redux/actions/walletActions';
+import { buyBtc, sellBtc } from '../redux/actions/walletActions';
 import { Button, InputMasked, Li, Ul } from '@dnb/eufemia';
-
-const UsdGet = () => {store.dispatch(getUsd())}
 
 export const CoinPage = () => {
     useEffect(() => {
         store.dispatch(cleanState())
         setTimeout(() => {store.dispatch(getUsd())}, 5)
-        setTimeout(() => {store.dispatch(getBtc())}, 150)
-        setTimeout(() => {store.dispatch(getEth())}, 300)
-        setTimeout(() => {store.dispatch(getDoge())}, 450)
-        setTimeout(() => {store.dispatch(getBnb())}, 600)
+        setTimeout(() => {store.dispatch(getBtc())}, 100)
+        setTimeout(() => {store.dispatch(getEth())}, 350)
+        setTimeout(() => {store.dispatch(getDoge())}, 550)
+        setTimeout(() => {store.dispatch(getBnb())}, 750)
 
     }, [])
 
     const cryptoData = useSelector(state => state.coins.coins);
 
     const BuyBtc = () => (store.dispatch(buyBtc()))
+    const SellBtc = () => (store.dispatch(sellBtc()))
+
     if (cryptoData) {
         console.log(cryptoData);
         return (
@@ -47,13 +47,19 @@ export const CoinPage = () => {
                                         coin.id === "90" ? BuyBtc
                                             : undefined
                                     }
-
                                 >Buy</Button>
                                 <InputMasked
                                     as_currency="USD" />
                             </div>
                             <div>
-                                <Button space="small">Sell</Button>
+                                <Button 
+                                space="small"
+                                onClick=
+                                {
+                                    coin.id === "90" ? SellBtc
+                                        : undefined
+                                }
+                                >Sell</Button>
                                 <InputMasked
                                     as_currency="USD" />
                             </div>
