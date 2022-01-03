@@ -31,3 +31,5 @@ Next:
 [ ] make the wallet reducer handle buy/sell orders for selected coins
 [ ] make the buttons handle buy sell orders
 [ ] learn about caching, see if i can make it remember state for wallet
+
+text for git check
