@@ -17,7 +17,7 @@ export const AboutPage = () => (
                     <Li>React Router</Li>
                     <Li> Dnb's css/component library <Anchor target="_blank" href="https://eufemia.dnb.no/"> Eufemia</Anchor></Li>
                 </Ul>
-            </p>
+            This project is open source and available on <Anchor target="_blank" href="https://github.com/OysteinKoder/learn_project">Github</Anchor></p>
         </WalletCard>
         <WalletCard>
 <H2>Log</H2>
@@ -29,6 +29,7 @@ export const AboutPage = () => (
 <Li>[ ] Make figma design for wallet page </Li>
 <Li>[ ] Make every other coincard have different background color </Li>
 <Li>[ ] improve the load order of the coins to make it consistent. </Li>
+<Li>[ ] add possibility to buy a given amount of currency through input field </Li>
 <br></br>
 </Ul>
 </WalletCard>
@@ -37,9 +38,10 @@ export const AboutPage = () => (
 <Ul>
 <H3>Finished</H3>
 <H4>04.01.2022</H4>
+<Li>[√] added current wallet-coins for each coin to the coins page </Li>
 <Li>[√] add a reset wallet button </Li>
-<Li>[√] see if i can make it remember state for wallet. redux persist </Li>
-<Li>[√] found Suitable icons for coins </Li>
+<Li>[√] now remembers state for wallet, and stores it locally. redux persist </Li>
+<Li>[√] Added icons for each crypto coin</Li>
 
 <H4>03.01.2022</H4>
 <Li>[√] Make the wallet reducer handle buy/sell orders for selected coins </Li>
