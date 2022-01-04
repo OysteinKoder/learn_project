@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, Ul, Li, H2, H3, H4 } from "@dnb/eufemia";
+import { Section, Ul, Li, H2, H3, H4, Anchor } from "@dnb/eufemia";
 import { WalletCard } from '../components/walletPage/styles.js'
 
 export const AboutPage = () => (
@@ -15,7 +15,7 @@ export const AboutPage = () => (
                     <Li>Api's</Li>
                     <Li>Redux</Li>
                     <Li>React Router</Li>
-                    <Li>Dnb's css eufemia liberary</Li>
+                    <Li> Dnb's css/component library <Anchor target="_blank" href="https://eufemia.dnb.no/"> Eufemia</Anchor></Li>
                 </Ul>
             </p>
         </WalletCard>
