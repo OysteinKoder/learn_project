@@ -25,3 +25,5 @@ export const SELL_DOGE = 'SELL_DOGE';
 export const GET_BNB_DATA = 'GET_BNB_DATA';
 export const BUY_BNB = 'BUY_BNB';
 export const SELL_BNB = 'SELL_BNB';
+
+export const RESET_WALLET = 'RESET_WALLET'

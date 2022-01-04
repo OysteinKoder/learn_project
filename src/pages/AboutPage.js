@@ -37,6 +37,7 @@ export const AboutPage = () => (
 <Ul>
 <H3>Finished</H3>
 <H4>04.01.2022</H4>
+<Li>[√] add a reset wallet button </Li>
 <Li>[√] see if i can make it remember state for wallet. redux persist </Li>
 
 <H4>03.01.2022</H4>

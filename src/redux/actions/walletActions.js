@@ -7,7 +7,8 @@ import {
     BUY_DOGE,
     SELL_DOGE,
     BUY_BNB,
-    SELL_BNB
+    SELL_BNB,
+    RESET_WALLET
 } from "../types"
 
 export const buyBtc = () => {
@@ -80,6 +81,14 @@ export const sellBnb = () => {
         {
             type: SELL_BNB,
             payload: store.getState().coins.coins[4].price_usd
+        }
+    )
+}
+
+export const resetWallet = () => {
+    return (
+        {
+            type: RESET_WALLET
         }
     )
 }

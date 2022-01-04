@@ -6,8 +6,10 @@ import {
     BUY_DOGE,
     SELL_DOGE,
     BUY_BNB,
-    SELL_BNB
+    SELL_BNB,
+    RESET_WALLET
 } from "../types";
+import { initialState } from "./coinReducers";
 
 const initialWallet = {
     USD: 1000000,
@@ -68,6 +70,10 @@ export default function (state = initialWallet, action) {
                 USD: state.BNB * action.payload,
                 BNB: 0
             }
+        case RESET_WALLET: 
+        return {
+            ...state = initialWallet
+        }
         default: return state
     }
 }
