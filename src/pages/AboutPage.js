@@ -27,8 +27,7 @@ export const AboutPage = () => (
 <Ul>
 <H3>ToDo</H3>
 <Li>[ ] Make figma design for wallet page </Li>
-<Li>[ ] Make every other coincard have different background color  </Li>
-<Li>[ ] learn about caching, see if i can make it remember state for wallet </Li>
+<Li>[ ] Make every other coincard have different background color </Li>
 <Li>[ ] improve the load order of the coins to make it consistent. </Li>
 <br></br>
 </Ul>
@@ -37,6 +36,9 @@ export const AboutPage = () => (
 <WalletCard>
 <Ul>
 <H3>Finished</H3>
+<H4>04.01.2022</H4>
+<Li>[√] see if i can make it remember state for wallet. redux persist </Li>
+
 <H4>03.01.2022</H4>
 <Li>[√] Make the wallet reducer handle buy/sell orders for selected coins </Li>
 <Li>[√] implement the simple buy sell order on other coins </Li>

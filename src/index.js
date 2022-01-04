@@ -6,13 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import '@dnb/eufemia/style/basis';
 import '@dnb/eufemia/style/components';
 import '@dnb/eufemia/style/themes/ui';
-import { Provider } from 'react-redux'
-import {store} from './redux/store'
+import { Provider } from 'react-redux';
+import { store, persistor } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <App />
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
