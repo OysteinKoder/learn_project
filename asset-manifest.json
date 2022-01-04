@@ -1,28 +1,29 @@
 {
   "files": {
     "main.css": "/learn_project/static/css/main.eab24d3c.chunk.css",
-    "main.js": "/learn_project/static/js/main.4e9d0514.chunk.js",
-    "main.js.map": "/learn_project/static/js/main.4e9d0514.chunk.js.map",
-    "runtime-main.js": "/learn_project/static/js/runtime-main.8375c541.js",
-    "runtime-main.js.map": "/learn_project/static/js/runtime-main.8375c541.js.map",
+    "main.js": "/learn_project/static/js/main.fbc87feb.chunk.js",
+    "main.js.map": "/learn_project/static/js/main.fbc87feb.chunk.js.map",
+    "runtime-main.js": "/learn_project/static/js/runtime-main.1f1df843.js",
+    "runtime-main.js.map": "/learn_project/static/js/runtime-main.1f1df843.js.map",
     "static/css/2.ca3a22af.chunk.css": "/learn_project/static/css/2.ca3a22af.chunk.css",
-    "static/js/2.f076f3b6.chunk.js": "/learn_project/static/js/2.f076f3b6.chunk.js",
-    "static/js/2.f076f3b6.chunk.js.map": "/learn_project/static/js/2.f076f3b6.chunk.js.map",
-    "static/js/3.b0e7d3e4.chunk.js": "/learn_project/static/js/3.b0e7d3e4.chunk.js",
-    "static/js/3.b0e7d3e4.chunk.js.map": "/learn_project/static/js/3.b0e7d3e4.chunk.js.map",
+    "static/js/2.ecb3b94e.chunk.js": "/learn_project/static/js/2.ecb3b94e.chunk.js",
+    "static/js/2.ecb3b94e.chunk.js.map": "/learn_project/static/js/2.ecb3b94e.chunk.js.map",
+    "static/js/3.c54bbcba.chunk.js": "/learn_project/static/js/3.c54bbcba.chunk.js",
+    "static/js/3.c54bbcba.chunk.js.map": "/learn_project/static/js/3.c54bbcba.chunk.js.map",
     "index.html": "/learn_project/index.html",
-    "precache-manifest.ae4e68216be2da5491da87745ce717ae.js": "/learn_project/precache-manifest.ae4e68216be2da5491da87745ce717ae.js",
+    "precache-manifest.23e9f8a77767e310371ece5fc2f44768.js": "/learn_project/precache-manifest.23e9f8a77767e310371ece5fc2f44768.js",
     "service-worker.js": "/learn_project/service-worker.js",
     "static/css/2.ca3a22af.chunk.css.map": "/learn_project/static/css/2.ca3a22af.chunk.css.map",
     "static/css/main.eab24d3c.chunk.css.map": "/learn_project/static/css/main.eab24d3c.chunk.css.map",
+    "static/media/BnbIcon.png": "/learn_project/static/media/BnbIcon.2ade2fae.png",
     "static/media/dnb-ui-basis.min.css": "/learn_project/static/media/DNBMono-Regular.980ca464.ttf",
     "static/media/dnb-ui-components.min.css": "/learn_project/static/media/DNBMono-Skeleton-Regular.af6be20d.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.8375c541.js",
+    "static/js/runtime-main.1f1df843.js",
     "static/css/2.ca3a22af.chunk.css",
-    "static/js/2.f076f3b6.chunk.js",
+    "static/js/2.ecb3b94e.chunk.js",
     "static/css/main.eab24d3c.chunk.css",
-    "static/js/main.4e9d0514.chunk.js"
+    "static/js/main.fbc87feb.chunk.js"
   ]
 }
