@@ -5,7 +5,13 @@ import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/a
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
 import { buyBtc, sellBtc, buyEth, sellEth, buyDoge, sellDoge, buyBnb, sellBnb } from '../redux/actions/walletActions';
-import { Button, InputMasked, Li, Ul } from '@dnb/eufemia';
+import { Button, InputMasked, Li, Ul, Img } from '@dnb/eufemia';
+import { CoinIcon } from '../images/styles';
+import UsdIcon from '../images/UsdIcon.png';
+import EthIcon from '../images/EthIcon.png'
+import BtcIcon from '../images/BtcIcon.png';
+import DogeIcon from '../images/DogeIcon.png';
+import BnbIcon from '../images/BnbIcon.png';
 
 export const CoinPage = () => {
     useEffect(() => {
@@ -19,6 +25,12 @@ export const CoinPage = () => {
     }, [])
 
     const cryptoData = useSelector(state => state.coins.coins);
+
+    const usdWallet = useSelector(state => state.wallet.USD);
+    const btcWallet = useSelector(state => state.wallet.BTC)
+    const ethWallet = useSelector(state => state.wallet.ETH);
+    const dogeWallet = useSelector(state => state.wallet.DOGE);
+    const bnbWallet = useSelector(state => state.wallet.BNB);
 
     const BuyBtc = () => (store.dispatch(buyBtc()))
     const SellBtc = () => (store.dispatch(sellBtc()))
@@ -42,9 +54,31 @@ export const CoinPage = () => {
                     cryptoData.map((coin) =>
                         <CoinCard>
                             <Ul key={coin.id} >
-                                <Li key={coin.name} className="dnb-ul dnb-unstyled-list" >{coin.name}</Li>
-                                <Li key={coin.symbol} className="dnb-ul dnb-unstyled-list" >({coin.symbol})</Li>
-                                <Li key={coin.rank} className="dnb-ul dnb-unstyled-list" >{coin.price_usd} </Li>
+                                <Li key={coin.name} className="dnb-ul dnb-unstyled-list dnb-h--xx-large">{coin.name}
+                                    <CoinIcon
+                                        height="25rem"
+                                        src={
+                                        coin.id === "518" ? UsdIcon
+                                            :coin.id === "90" ? BtcIcon
+                                                : coin.id === "80" ? EthIcon
+                                                    : coin.id === "2" ? DogeIcon
+                                                        : coin.id === "2710" ? BnbIcon
+                                                                : undefined
+                                        } />
+                                </Li>
+                                <br></br>
+                                <Li key={coin.rank} className="dnb-ul dnb-unstyled-list dnb-h--xx-large">Price: {coin.price_usd} $ </Li>
+                                <br></br>
+                                <Li className="dnb-ul dnb-unstyled-list dnb-h--xx-large" key={coin.symbol}>
+                                    Your Wallet: {
+                                        coin.id === "518" ? usdWallet + " $"
+                                        :coin.id === "90" ? btcWallet
+                                            : coin.id === "80" ? ethWallet
+                                                : coin.id === "2" ? dogeWallet
+                                                    : coin.id === "2710" ? bnbWallet
+                                                            : undefined
+                                    }
+                                </Li>
                             </Ul>
                             <div>
                                 <Button

@@ -6,6 +6,7 @@ grid-template-columns: 15rem auto auto;
 border-bottom:  3px var(--color-sea-green) solid;
 padding: 1rem;
 background-color: var(--color-mint-green-25);
+align-items: center;
 `
 
 export const Btn = styled.button`
