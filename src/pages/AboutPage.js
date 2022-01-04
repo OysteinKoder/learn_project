@@ -39,6 +39,7 @@ export const AboutPage = () => (
 <H4>04.01.2022</H4>
 <Li>[√] add a reset wallet button </Li>
 <Li>[√] see if i can make it remember state for wallet. redux persist </Li>
+<Li>[√] found Suitable icons for coins </Li>
 
 <H4>03.01.2022</H4>
 <Li>[√] Make the wallet reducer handle buy/sell orders for selected coins </Li>

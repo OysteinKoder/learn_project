@@ -1,0 +1,5 @@
+btc: https://freeicons.io/trading-cryptocurrency-flat-icons-set/cryptocurrency-flat-bitcoin-btc-stock-market-trading-icon-53336
+eth: https://freeicons.io/trading-cryptocurrency-flat-icons-set/cryptocurrency-flat-ethereum-eth-trading-icon-53329#
+doge: https://freeicons.io/trading-cryptocurrency-flat-icons-set/cryptocurrency-flat-dogecoin-doge-stock-market-trading-icon-53332#
+BNB: https://www.flaticon.com/free-icon/binance_2794204?related_id=2794075&origin=search&k=1641298319705
+usd: https://freeicons.io/ecommerce-9/cash-money-dollar-payment-wealth-icon-134694#
