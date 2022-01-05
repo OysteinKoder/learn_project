@@ -12,7 +12,7 @@ import {
 import { initialState } from "./coinReducers";
 
 const initialWallet = {
-    USD: 1000000,
+    USD: 100000,
     BTC: null,
     ETH: null,
     DOGE: null,
