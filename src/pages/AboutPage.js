@@ -37,7 +37,7 @@ export const AboutPage = () => (
 <WalletCard>
 <Ul>
 <H3>Finished</H3>
-<H4>04.01.2022</H4>
+<H4>05.01.2022</H4>
 <Li>[√] pure usd wallet now renders on top</Li>
 <Li>[√] percentage change for last 24h added, and changes color if + or - change (red/green)</Li>
 <br/>
