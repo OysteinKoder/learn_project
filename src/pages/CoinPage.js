@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { CoinCard, } from '../components/coinPage/Styles';
+import { CoinCard, TopCard, } from '../components/coinPage/Styles';
 import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
 import { buyBtc, sellBtc, buyEth, sellEth, buyDoge, sellDoge, buyBnb, sellBnb } from '../redux/actions/walletActions';
-import { Button, InputMasked, Li, Ul, Img } from '@dnb/eufemia';
+import { Button, InputMasked, Li, Ul, Img, H3 } from '@dnb/eufemia';
 import { CoinIcon } from '../images/styles';
 import UsdIcon from '../images/UsdIcon.png';
 import EthIcon from '../images/EthIcon.png'
@@ -50,32 +50,49 @@ export const CoinPage = () => {
         console.log(cryptoData);
         return (
             <div>
+                <TopCard style={{ justifyContent: "center" }}>
+                    <Img
+                        src={UsdIcon}
+                        height="64px" />
+                    <H3 style={{ color: "var(--color-sea-green)", margin: "1rem" }}>{usdWallet}$ USD</H3>
+                    <Img
+                        src={UsdIcon}
+                        height="64px" />
+                </TopCard>
                 {
-                    cryptoData.map((coin) =>
+                    cryptoData.slice(1).map((coin) =>
                         <CoinCard>
                             <Ul key={coin.id} >
                                 <Li key={coin.name} className="dnb-ul dnb-unstyled-list dnb-h--xx-large">{coin.name}
                                     <CoinIcon
                                         height="25rem"
                                         src={
-                                        coin.id === "518" ? UsdIcon
-                                            :coin.id === "90" ? BtcIcon
-                                                : coin.id === "80" ? EthIcon
-                                                    : coin.id === "2" ? DogeIcon
-                                                        : coin.id === "2710" ? BnbIcon
+                                            coin.id === "518" ? UsdIcon
+                                                : coin.id === "90" ? BtcIcon
+                                                    : coin.id === "80" ? EthIcon
+                                                        : coin.id === "2" ? DogeIcon
+                                                            : coin.id === "2710" ? BnbIcon
                                                                 : undefined
                                         } />
                                 </Li>
+                                <br />
+                                <Li className="dnb-ul dnb-unstyled-list dnb-h--xx-large">24 h change: <span style={
+                                    coin.percent_change_24h > 0 ? {color: "green"}
+                                    : coin.percent_change_24h < 0 ? {color: "red"}
+                                    : undefined
+                                }>{coin.percent_change_24h} % </span> </Li>
                                 <br></br>
-                                <Li key={coin.rank} className="dnb-ul dnb-unstyled-list dnb-h--xx-large">Price: {coin.price_usd} $ </Li>
+                                <Li key={coin.rank}
+                                    className="dnb-ul dnb-unstyled-list dnb-h--xx-large">Price:
+                                     {coin.price_usd} $ </Li>
                                 <br></br>
                                 <Li className="dnb-ul dnb-unstyled-list dnb-h--xx-large" key={coin.symbol}>
                                     Your Wallet: {
                                         coin.id === "518" ? usdWallet + " $"
-                                        :coin.id === "90" ? btcWallet
-                                            : coin.id === "80" ? ethWallet
-                                                : coin.id === "2" ? dogeWallet
-                                                    : coin.id === "2710" ? bnbWallet
+                                            : coin.id === "90" ? btcWallet
+                                                : coin.id === "80" ? ethWallet
+                                                    : coin.id === "2" ? dogeWallet
+                                                        : coin.id === "2710" ? bnbWallet
                                                             : undefined
                                     }
                                 </Li>

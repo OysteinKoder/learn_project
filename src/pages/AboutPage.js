@@ -38,10 +38,16 @@ export const AboutPage = () => (
 <Ul>
 <H3>Finished</H3>
 <H4>04.01.2022</H4>
+<Li>[√] pure usd wallet now renders on top</Li>
+<Li>[√] percentage change for last 24h added, and changes color if + or - change (red/green)</Li>
+<br/>
+
+<H4>04.01.2022</H4>
 <Li>[√] added current wallet-coins for each coin to the coins page </Li>
 <Li>[√] add a reset wallet button </Li>
 <Li>[√] now remembers state for wallet, and stores it locally. redux persist </Li>
 <Li>[√] Added icons for each crypto coin</Li>
+<br/>
 
 <H4>03.01.2022</H4>
 <Li>[√] Make the wallet reducer handle buy/sell orders for selected coins </Li>
@@ -56,11 +62,13 @@ export const AboutPage = () => (
 <Li>[√] make github host project as website </Li>
 <Li>[√] removed a bunch of console errors</Li>
 <br></br>
+
 <H4>02.01.2022</H4>
 <Li>[x] update dependecies for security (failed, eufemia imports would not work anymore) </Li>
 <Li>[√] make figma design for trade page </Li>
 <Li>[√] work on styling for coins/trade page </Li>
 <br></br>
+
 <H4>29.12.21</H4>
 <Li>[√] Remove unused "coins" from coins page. </Li>
 <Li>[√] coins render based on coin-spesific api calls through redux </Li>
