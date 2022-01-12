@@ -8,7 +8,7 @@ import { buyBtc, sellBtc, buyEth, sellEth, buyDoge, sellDoge, buyBnb, sellBnb } 
 import { Button, InputMasked, Li, Ul, Img, H3 } from '@dnb/eufemia';
 import { CoinIcon } from '../images/styles';
 import UsdIcon from '../images/UsdIcon.png';
-import EthIcon from '../images/EthIcon.png'
+import EthIcon from '../images/EthIcon.png';
 import BtcIcon from '../images/BtcIcon.png';
 import DogeIcon from '../images/DogeIcon.png';
 import BnbIcon from '../images/BnbIcon.png';
