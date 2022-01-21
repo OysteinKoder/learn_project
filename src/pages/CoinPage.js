@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { CoinCard, TopCard, } from '../components/coinPage/Styles';
-import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
+import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, getCoins } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
 import { buyBtc, sellBtc, buyEth, sellEth, buyDoge, sellDoge, buyBnb, sellBnb } from '../redux/actions/walletActions';
@@ -16,15 +16,16 @@ import BnbIcon from '../images/BnbIcon.png';
 export const CoinPage = () => {
     useEffect(() => {
         store.dispatch(cleanState())
-        setTimeout(() => { store.dispatch(getUsd()) }, 5)
-        setTimeout(() => { store.dispatch(getBtc()) }, 100)
-        setTimeout(() => { store.dispatch(getEth()) }, 350)
-        setTimeout(() => { store.dispatch(getDoge()) }, 550)
-        setTimeout(() => { store.dispatch(getBnb()) }, 750)
+        // setTimeout(() => { store.dispatch(getUsd()) }, 5)
+        // setTimeout(() => { store.dispatch(getBtc()) }, 100)
+        // setTimeout(() => { store.dispatch(getEth()) }, 350)
+        // setTimeout(() => { store.dispatch(getDoge()) }, 550)
+        // setTimeout(() => { store.dispatch(getBnb()) }, 750)
+        store.dispatch(getCoins())
 
     }, [])
 
-    const cryptoData = useSelector(state => state.coins.coins);
+    const cryptoData = useSelector(state => state.coins.coins[1]);
 
     const usdWallet = useSelector(state => state.wallet.USD);
     const btcWallet = useSelector(state => state.wallet.BTC)
@@ -44,10 +45,25 @@ export const CoinPage = () => {
     const BuyBnb = () => (store.dispatch(buyBnb()))
     const SellBnb = () => (store.dispatch(sellBnb()))
 
-
-
+let coinArray = []
     if (cryptoData) {
-        console.log(cryptoData);
+        let newArray = []
+        const coins = cryptoData.data;
+        console.log(coins)
+        setTimeout( () => {
+        for (let i = 0; i < 100; i++) 
+            if (
+                coins[i].id === "518" 
+                || coins[i].id === "2710" 
+                || coins[i].id === "90"
+                || coins[i].id === "80" 
+                || coins[i].id === "2" 
+                ) {
+                newArray.push(coins[i])
+                console.log(newArray)
+            }
+        },200)
+        
         return (
             <div>
                 <TopCard style={{ justifyContent: "center" }}>
@@ -60,7 +76,7 @@ export const CoinPage = () => {
                         height="64px" />
                 </TopCard>
                 {
-                    cryptoData.slice(1).map((coin) =>
+                    coinArray.splice(1).map((coin) =>
                         <CoinCard>
                             <Ul key={coin.id} >
                                 <Li key={coin.name} className="dnb-ul dnb-unstyled-list dnb-h--xx-large">{coin.name}
