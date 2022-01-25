@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CoinCard = styled.div`
+export const CoinContainer = styled.div`
 height: 11rem;
 display: grid;
 grid-template-columns: 25rem auto auto;

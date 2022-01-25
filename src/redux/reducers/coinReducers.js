@@ -13,6 +13,11 @@ let loadingState = false;
 
 export const initialState = {
     coins:[],
+    usd:[],
+    btc:[],
+    eth:[],
+    doge:[],
+    bnb:[],
     loading:loadingState,
 }
 
@@ -26,31 +31,31 @@ export default function (state = initialState, action){
         case GET_BTC_DATA: 
         return {
             ...state,
-            coins: state.coins.concat(action.payload)
+            btc: state.btc.concat(action.payload)
         }
         case GET_USD_DATA:
             return {
                 ...state,
-                coins: state.coins.concat(action.payload),
+                usd: state.usd.concat(action.payload),
                 loading: !loadingState
             }
         case GET_ETH_DATA:
             return{
                 ...state,
-                coins: state.coins.concat(action.payload),
+                eth: state.eth.concat(action.payload),
                 loading: !loadingState
             }
         
         case GET_DOGE_DATA: 
             return {
                 ...state,
-                coins: state.coins.concat(action.payload),
+                doge: state.doge.concat(action.payload),
                 loading: !loadingState
             }
         case GET_BNB_DATA: 
         return {
             ...state,
-            coins: state.coins.concat(action.payload),
+            bnb: state.bnb.concat(action.payload),
             loading: !loadingState
         }
         case CLEAN_STATE: 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { CoinCard, TopCard, } from '../components/coinPage/styles';
+import { CoinContainer, TopCard } from '../components/coinPage/styles';
 import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
@@ -8,10 +8,11 @@ import { buyBtc, sellBtc, buyEth, sellEth, buyDoge, sellDoge, buyBnb, sellBnb } 
 import { Button, InputMasked, Li, Ul, Img, H3 } from '@dnb/eufemia';
 import { CoinIcon } from '../images/styles';
 import UsdIcon from '../images/UsdIcon.png';
-import EthIcon from '../images/EthIcon.png'
-import BtcIcon from '../images/BtcIcon.png';
-import DogeIcon from '../images/DogeIcon.png';
-import BnbIcon from '../images/BnbIcon.png';
+import EtheriumCoinIcon from '../images/EthIcon.png'
+import BitcoinIcon from '../images/BitcoinIcon.png';
+import DogeCoinIcon from '../images/DogeIcon.png';
+import BinanceCoinIcon from '../images/BnbIcon.png';
+import { CoinCard } from '../components/coinPage/components';
 
 export const CoinPage = () => {
     useEffect(() => {
@@ -24,7 +25,10 @@ export const CoinPage = () => {
 
     }, [])
 
-    const cryptoData = useSelector(state => state.coins.coins);
+    const bitCoinData = useSelector(state => state.coins.btc[0]);
+    const etheriumCoinData = useSelector(state => state.coins.eth[0]);
+    const dogeCoinData = useSelector(state => state.coins.btc[0]);
+    const binanceCoinData = useSelector(state => state.coins.bnb[0]);
 
     const usdWallet = useSelector(state => state.wallet.USD);
     const btcWallet = useSelector(state => state.wallet.BTC)
@@ -46,8 +50,8 @@ export const CoinPage = () => {
 
 
 
-    if (cryptoData) {
-        console.log(cryptoData);
+    if (bitCoinData && etheriumCoinData && dogeCoinData && binanceCoinData) {
+        console.log(bitCoinData);
         return (
             <div>
                 <TopCard style={{ justifyContent: "center" }}>
@@ -59,76 +63,28 @@ export const CoinPage = () => {
                         src={UsdIcon}
                         height="64px" />
                 </TopCard>
-                {
-                    cryptoData.slice(1).map((coin) =>
-                        <CoinCard>
-                            <Ul key={coin.id} >
-                                <Li key={coin.name} className="dnb-ul dnb-unstyled-list dnb-h--xx-large">{coin.name}
-                                    <CoinIcon
-                                        height="25rem"
-                                        src={
-                                            coin.id === "518" ? UsdIcon
-                                                : coin.id === "90" ? BtcIcon
-                                                    : coin.id === "80" ? EthIcon
-                                                        : coin.id === "2" ? DogeIcon
-                                                            : coin.id === "2710" ? BnbIcon
-                                                                : undefined
-                                        } />
-                                </Li>
-                                <br />
-                                <Li className="dnb-ul dnb-unstyled-list dnb-h--xx-large">24 h change: <span style={
-                                    coin.percent_change_24h > 0 ? {color: "green"}
-                                    : coin.percent_change_24h < 0 ? {color: "red"}
-                                    : undefined
-                                }>{coin.percent_change_24h} % </span> </Li>
-                                <br></br>
-                                <Li key={coin.rank}
-                                    className="dnb-ul dnb-unstyled-list dnb-h--xx-large">Price:
-                                     {coin.price_usd} $ </Li>
-                                <br></br>
-                                <Li className="dnb-ul dnb-unstyled-list dnb-h--xx-large" key={coin.symbol}>
-                                    Your Wallet: {
-                                        coin.id === "518" ? usdWallet + " $"
-                                            : coin.id === "90" ? btcWallet
-                                                : coin.id === "80" ? ethWallet
-                                                    : coin.id === "2" ? dogeWallet
-                                                        : coin.id === "2710" ? bnbWallet
-                                                            : undefined
-                                    }
-                                </Li>
-                            </Ul>
-                            <div>
-                                <Button
-                                    space="small"
-                                    onClick=
-                                    {
-                                        coin.id === "90" ? BuyBtc
-                                            : coin.id === "80" ? BuyEth
-                                                : coin.id === "2" ? BuyDoge
-                                                    : coin.id === "2710" ? BuyBnb
-                                                        : undefined
-                                    }
-                                >Buy</Button>
-                                <InputMasked
-                                    as_currency="USD" />
-                            </div>
-                            <div>
-                                <Button
-                                    space="small"
-                                    onClick=
-                                    {
-                                        coin.id === "90" ? SellBtc
-                                            : coin.id === "80" ? SellEth
-                                                : coin.id === "2" ? SellDoge
-                                                    : coin.id === "2710" ? SellBnb
-                                                        : undefined
-                                    }
-                                >Sell</Button>
-                                <InputMasked
-                                    as_currency="USD" />
-                            </div>
-                        </CoinCard>
-                    )}
+                <CoinCard
+                    coin={bitCoinData}
+                    coinName={bitCoinData.name}
+                    icon={BitcoinIcon}
+                    buyAction={buyBtc}
+                    sellAction={sellBtc}
+                />
+                <CoinCard
+                    coin={etheriumCoinData}
+                    coinName={etheriumCoinData.name}
+                    icon={EtheriumCoinIcon}
+                />
+                <CoinCard
+                    coin={dogeCoinData}
+                    coinName={dogeCoinData.name}
+                    icon={DogeCoinIcon}
+                />
+                <CoinCard
+                    coin={binanceCoinData}
+                    coinName={binanceCoinData.name}
+                    icon={BinanceCoinIcon}
+                />
             </div>
         )
     }

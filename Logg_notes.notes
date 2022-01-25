@@ -29,7 +29,7 @@ Finished:
 Next:
 [ ] make figma design for wallet page
 [ ] make figma design for about page 
-[ ] make every other coincard have different background color 
+[ ] make every other CoinContainer have different background color 
 [ ] render coins in spesific order instead of random
 [ ] make the wallet reducer handle buy/sell orders for selected coins
 [ ] make the buttons handle buy sell orders

@@ -15,7 +15,7 @@ export const buyBtc = () => {
     return (
         {
             type: BUY_BTC,
-            payload: store.getState().coins.coins[1].price_usd
+            payload: store.getState().coins.btc[0].price_usd
         }
         // payload: store.getState().coins.coins[0].price_usd}
     )
@@ -25,7 +25,7 @@ export const sellBtc = () => {
     return (
         {
             type: SELL_BTC,
-            payload: store.getState().coins.coins[1].price_usd
+            payload: store.getState().coins.btc[0].price_usd
         }
         // payload: store.getState().coins.coins[0].price_usd}
     )
