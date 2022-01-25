@@ -28,9 +28,7 @@ export const AboutPage = () => (
                 <H3>ToDo</H3>
                 <Li>[ ] Make figma design for wallet page </Li>
                 <Li>[ ] Make every other CoinContainer have different background color </Li>
-                <Li>[ ] improve the load order of the coins to make it consistent. </Li>
                 <Li>[ ] add possibility to buy a given amount of currency through input field </Li>
-                <Li>[ ] update buy sell method/states to work with new coin state method </Li>
                 <br></br>
             </Ul>
         </WalletCard>
@@ -41,7 +39,9 @@ export const AboutPage = () => (
                 
                 <H3>Finished</H3>
                 <H4>25.01.2022</H4>
+                <Li>[√] update buy sell method/states to work with new coin state method </Li>
                 <Li>[√] New way to render coins</Li>
+                <Li>[√] improve the load order of the coins to make it consistent. </Li>
                 <Li>[√] Change the way coin states are handled in redux to suit new render method</Li>
                 <br />
 

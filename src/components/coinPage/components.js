@@ -3,17 +3,10 @@ import { Button, InputMasked, Li, Ul } from '@dnb/eufemia';
 import { CoinContainer, TopCard } from './styles';
 import { CoinIcon } from "../../images/styles";
 
-import UsdIcon from '../../images/UsdIcon.png';
-import EthIcon from '../../images/EthIcon.png'
-import BitcoinIcon from '../../images/BitcoinIcon.png';
-import DogeIcon from '../../images/DogeIcon.png';
-import BnbIcon from '../../images/BnbIcon.png';
-
 
 export const CoinCard = (props) => {
     const {
         coin,
-        coinName,
         icon,
         coinWallet,
         buyAction,

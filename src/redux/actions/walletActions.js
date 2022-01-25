@@ -35,7 +35,7 @@ export const buyEth = () => {
     return (
         {
             type: BUY_ETH,
-            payload: store.getState().coins.coins[2].price_usd
+            payload: store.getState().coins.eth[0].price_usd
         }
     )
 }
@@ -44,7 +44,7 @@ export const sellEth = () => {
     return (
         {
             type: SELL_ETH,
-            payload: store.getState().coins.coins[2].price_usd
+            payload: store.getState().coins.eth[0].price_usd
         }
     )
 }
@@ -53,7 +53,7 @@ export const buyDoge = () => {
     return (
         {
             type: BUY_DOGE,
-            payload: store.getState().coins.coins[3].price_usd
+            payload: store.getState().coins.doge[0].price_usd
         }
     )
 }
@@ -62,7 +62,7 @@ export const sellDoge = () => {
     return (
         {
             type: SELL_DOGE,
-            payload: store.getState().coins.coins[3].price_usd
+            payload: store.getState().coins.doge[0].price_usd
         }
     )
 }
@@ -71,7 +71,7 @@ export const buyBnb = () => {
     return (
         {
             type: BUY_BNB,
-            payload: store.getState().coins.coins[4].price_usd
+            payload: store.getState().coins.bnb[0].price_usd
         }
     )
 }
@@ -80,7 +80,7 @@ export const sellBnb = () => {
     return (
         {
             type: SELL_BNB,
-            payload: store.getState().coins.coins[4].price_usd
+            payload: store.getState().coins.bnb[0].price_usd
         }
     )
 }

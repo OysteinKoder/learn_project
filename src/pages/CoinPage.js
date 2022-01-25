@@ -8,7 +8,7 @@ import { buyBtc, sellBtc, buyEth, sellEth, buyDoge, sellDoge, buyBnb, sellBnb } 
 import { Button, InputMasked, Li, Ul, Img, H3 } from '@dnb/eufemia';
 import { CoinIcon } from '../images/styles';
 import UsdIcon from '../images/UsdIcon.png';
-import EtheriumCoinIcon from '../images/EthIcon.png'
+import ethereumCoinIcon from '../images/EthIcon.png'
 import BitcoinIcon from '../images/BitcoinIcon.png';
 import DogeCoinIcon from '../images/DogeIcon.png';
 import BinanceCoinIcon from '../images/BnbIcon.png';
@@ -17,17 +17,16 @@ import { CoinCard } from '../components/coinPage/components';
 export const CoinPage = () => {
     useEffect(() => {
         store.dispatch(cleanState())
-        setTimeout(() => { store.dispatch(getUsd()) }, 5)
-        setTimeout(() => { store.dispatch(getBtc()) }, 100)
-        setTimeout(() => { store.dispatch(getEth()) }, 350)
-        setTimeout(() => { store.dispatch(getDoge()) }, 550)
-        setTimeout(() => { store.dispatch(getBnb()) }, 750)
-
+        store.dispatch(getUsd())
+        store.dispatch(getBtc())
+        store.dispatch(getEth())
+        store.dispatch(getDoge())
+        store.dispatch(getBnb())
     }, [])
 
     const bitCoinData = useSelector(state => state.coins.btc[0]);
-    const etheriumCoinData = useSelector(state => state.coins.eth[0]);
-    const dogeCoinData = useSelector(state => state.coins.btc[0]);
+    const ethereumCoinData = useSelector(state => state.coins.eth[0]);
+    const dogeCoinData = useSelector(state => state.coins.doge[0]);
     const binanceCoinData = useSelector(state => state.coins.bnb[0]);
 
     const usdWallet = useSelector(state => state.wallet.USD);
@@ -50,8 +49,7 @@ export const CoinPage = () => {
 
 
 
-    if (bitCoinData && etheriumCoinData && dogeCoinData && binanceCoinData) {
-        console.log(bitCoinData);
+    if (bitCoinData && ethereumCoinData && dogeCoinData && binanceCoinData) {
         return (
             <div>
                 <TopCard style={{ justifyContent: "center" }}>
@@ -67,23 +65,33 @@ export const CoinPage = () => {
                     coin={bitCoinData}
                     coinName={bitCoinData.name}
                     icon={BitcoinIcon}
-                    buyAction={buyBtc}
-                    sellAction={sellBtc}
+                    buyAction={BuyBtc}
+                    sellAction={SellBtc}
+                    coinWallet={btcWallet}
                 />
                 <CoinCard
-                    coin={etheriumCoinData}
-                    coinName={etheriumCoinData.name}
-                    icon={EtheriumCoinIcon}
+                    coin={ethereumCoinData}
+                    coinName={ethereumCoinData.name}
+                    icon={ethereumCoinIcon}
+                    buyAction={BuyEth}
+                    sellAction={SellEth}
+                    coinWallet={ethWallet}
                 />
                 <CoinCard
                     coin={dogeCoinData}
                     coinName={dogeCoinData.name}
                     icon={DogeCoinIcon}
+                    buyAction={BuyDoge}
+                    sellAction={SellDoge}
+                    coinWallet={dogeWallet}
                 />
                 <CoinCard
                     coin={binanceCoinData}
                     coinName={binanceCoinData.name}
                     icon={BinanceCoinIcon}
+                    buyAction={BuyBnb}
+                    sellAction={SellBnb}
+                    coinWallet={bnbWallet}
                 />
             </div>
         )

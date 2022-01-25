@@ -9,10 +9,9 @@ import {
     SELL_BNB,
     RESET_WALLET
 } from "../types";
-import { initialState } from "./coinReducers";
 
 const initialWallet = {
-    USD: 100000,
+    USD: 1000000,
     BTC: null,
     ETH: null,
     DOGE: null,
