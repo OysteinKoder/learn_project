@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { CoinCard, TopCard, } from '../components/coinPage/Styles';
+import { CoinCard, TopCard, } from '../components/coinPage/styles';
 import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
