@@ -29,6 +29,7 @@ export const AboutPage = () => (
 <Li>[ ] Make figma design for wallet page </Li>
 <Li>[ ] Make every other coincard have different background color </Li>
 <Li>[ ] improve the load order of the coins to make it consistent. </Li>
+<Li>[ ] ↑make coins be rendered as a component fed with props rather then mapped from array.↑</Li>
 <Li>[ ] add possibility to buy a given amount of currency through input field </Li>
 <br></br>
 </Ul>
@@ -37,6 +38,10 @@ export const AboutPage = () => (
 <WalletCard>
 <Ul>
 <H3>Finished</H3>
+<H4>21.01.2022</H4>
+<Li>[√] Plan new way to render coins in correct order</Li>
+<br/>
+
 <H4>12.01.2022</H4>
 <Li>[√] Made New git branch /bugfix-coin-renders-in-order.</Li>
 <br/>
