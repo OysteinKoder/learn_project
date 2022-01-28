@@ -1,12 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { CoinContainer, TopCard } from '../components/coinPage/styles';
+import { TopCard } from '../components/coinPage/styles';
 import { getBnb, getBtc, cleanState, getDoge, getUsd, getEth, } from '../redux/actions/coinsActions';
 import { useSelector } from 'react-redux';
 import { store } from '../redux/store';
 import { buyBtc, sellBtc, buyEth, sellEth, buyDoge, sellDoge, buyBnb, sellBnb } from '../redux/actions/walletActions';
-import { Button, InputMasked, Li, Ul, Img, H3 } from '@dnb/eufemia';
-import { CoinIcon } from '../images/styles';
+import { Img, H3 } from '@dnb/eufemia';
 import UsdIcon from '../images/UsdIcon.png';
 import ethereumCoinIcon from '../images/EthIcon.png'
 import BitcoinIcon from '../images/BitcoinIcon.png';
@@ -29,11 +28,11 @@ export const CoinPage = () => {
     const dogeCoinData = useSelector(state => state.coins.doge[0]);
     const binanceCoinData = useSelector(state => state.coins.bnb[0]);
 
-    const usdWallet = useSelector(state => state.wallet.USD);
-    const btcWallet = useSelector(state => state.wallet.BTC)
-    const ethWallet = useSelector(state => state.wallet.ETH);
-    const dogeWallet = useSelector(state => state.wallet.DOGE);
-    const bnbWallet = useSelector(state => state.wallet.BNB);
+    let usdWallet = useSelector(state => state.wallet.USD);
+    let btcWallet = useSelector(state => state.wallet.BTC);
+    let ethWallet = useSelector(state => state.wallet.ETH);
+    let dogeWallet = useSelector(state => state.wallet.DOGE);
+    let bnbWallet = useSelector(state => state.wallet.BNB);
 
     const BuyBtc = () => (store.dispatch(buyBtc()))
     const SellBtc = () => (store.dispatch(sellBtc()))
@@ -50,13 +49,14 @@ export const CoinPage = () => {
 
 
     if (bitCoinData && ethereumCoinData && dogeCoinData && binanceCoinData) {
+
         return (
             <div>
                 <TopCard style={{ justifyContent: "center" }}>
                     <Img
                         src={UsdIcon}
                         height="64px" />
-                    <H3 style={{ color: "var(--color-sea-green)", margin: "1rem" }}>{usdWallet}$ USD</H3>
+                    <H3 style={{ color: "var(--color-sea-green)", margin: "1rem" }}>{usdWallet.toLocaleString()}$ USD</H3>
                     <Img
                         src={UsdIcon}
                         height="64px" />
@@ -67,7 +67,7 @@ export const CoinPage = () => {
                     icon={BitcoinIcon}
                     buyAction={BuyBtc}
                     sellAction={SellBtc}
-                    coinWallet={btcWallet}
+                    coinWallet={btcWallet.toLocaleString()}
                 />
                 <CoinCard
                     coin={ethereumCoinData}
@@ -75,7 +75,7 @@ export const CoinPage = () => {
                     icon={ethereumCoinIcon}
                     buyAction={BuyEth}
                     sellAction={SellEth}
-                    coinWallet={ethWallet}
+                    coinWallet={ethWallet.toLocaleString()}
                 />
                 <CoinCard
                     coin={dogeCoinData}
@@ -83,7 +83,7 @@ export const CoinPage = () => {
                     icon={DogeCoinIcon}
                     buyAction={BuyDoge}
                     sellAction={SellDoge}
-                    coinWallet={dogeWallet}
+                    coinWallet={dogeWallet.toLocaleString()}
                 />
                 <CoinCard
                     coin={binanceCoinData}
@@ -91,7 +91,7 @@ export const CoinPage = () => {
                     icon={BinanceCoinIcon}
                     buyAction={BuyBnb}
                     sellAction={SellBnb}
-                    coinWallet={bnbWallet}
+                    coinWallet={bnbWallet.toLocaleString()}
                 />
             </div>
         )

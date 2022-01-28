@@ -27,9 +27,9 @@ export const CoinCard = (props) => {
                             : undefined
                 }>{coin.percent_change_24h} % </span> </Li>
                 <br></br>
-                <Li key={coin.rank}
-                    className="dnb-ul dnb-unstyled-list dnb-h--xx-large">Price:
-                    {coin.price_usd} $ </Li>
+                <Li
+                    className="dnb-ul dnb-unstyled-list dnb-h--xx-large">{"Price: "}
+                    {parseInt(coin.price_usd).toLocaleString()} $ </Li>
                 <br></br>
                 <Li className="dnb-ul dnb-unstyled-list dnb-h--xx-large" key={coin.symbol}>
                     Your Wallet: {coinWallet}

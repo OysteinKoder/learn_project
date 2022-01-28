@@ -36,8 +36,13 @@ export const AboutPage = () => (
         <WalletCard>
             <Ul>
 
-                
+
                 <H3>Finished</H3>
+                <H4>28.01.2022</H4>
+                <Li>[√] Currency strings are now formatted with numerical separators for each 1000. This makes numbers much easier to read. Learned about parsint and toLocale methods</Li>
+
+                <br />
+
                 <H4>25.01.2022</H4>
                 <Li>[√] update buy sell method/states to work with new coin state method </Li>
                 <Li>[√] New way to render coins</Li>

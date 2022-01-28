@@ -11,11 +11,11 @@ import {
 } from "../types";
 
 const initialWallet = {
-    USD: 1000000,
-    BTC: null,
-    ETH: null,
-    DOGE: null,
-    BNB: null,
+    USD: 1_000_000,
+    BTC: 0,
+    ETH: 0,
+    DOGE: 0,
+    BNB: 0,
 }
 
 export default function (state = initialWallet, action) {

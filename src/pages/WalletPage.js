@@ -15,11 +15,11 @@ export const WalletPage = () => {
     if (currentWallet) 
     {return(
         <div>
-    <WalletCard> <p>USD:${currentWallet.USD}</p> </WalletCard>
-    <WalletCard> <p>BTC: {currentWallet.BTC} coins</p> </WalletCard>
-    <WalletCard> <p>ETH: {currentWallet.ETH} coins</p> </WalletCard>
-    <WalletCard> <p>DOGE:{currentWallet.DOGE} coins</p> </WalletCard>
-    <WalletCard> <p>BNB: {currentWallet.BNB} coins</p> </WalletCard>
+    <WalletCard> <p>USD:{currentWallet.USD.toLocaleString()} $</p> </WalletCard>
+    <WalletCard> <p>BTC: {currentWallet.BTC.toLocaleString()} coins</p> </WalletCard>
+    <WalletCard> <p>ETH: {currentWallet.ETH.toLocaleString()} coins</p> </WalletCard>
+    <WalletCard> <p>DOGE:{currentWallet.DOGE.toLocaleString()} coins</p> </WalletCard>
+    <WalletCard> <p>BNB: {currentWallet.BNB.toLocaleString()} coins</p> </WalletCard>
     <WalletCard> 
     <Button
     onClick={ResetWallet}>Reset Wallet</Button>
