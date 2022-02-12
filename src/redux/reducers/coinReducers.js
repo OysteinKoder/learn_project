@@ -1,4 +1,4 @@
-import { 
+import {
     GET_COINS_DATA,
     GET_USD_DATA,
     GET_BTC_DATA,
@@ -12,27 +12,27 @@ import {
 let loadingState = false;
 
 export const initialState = {
-    coins:[],
-    usd:[],
-    btc:[],
-    eth:[],
-    doge:[],
-    bnb:[],
-    loading:loadingState,
+    coins: [],
+    usd: [],
+    btc: [],
+    eth: [],
+    doge: [],
+    bnb: [],
+    loading: loadingState,
 }
 
-export default function (state = initialState, action){
-    switch(action.type){
+export default function (state = initialState, action) {
+    switch (action.type) {
         case GET_COINS_DATA:
-        return {
-            ...state,
-            coins: [state.coins, action.payload] 
-        }
-        case GET_BTC_DATA: 
-        return {
-            ...state,
-            btc: state.btc.concat(action.payload)
-        }
+            return {
+                ...state,
+                coins: [state.coins, action.payload]
+            }
+        case GET_BTC_DATA:
+            return {
+                ...state,
+                btc: state.btc.concat(action.payload)
+            }
         case GET_USD_DATA:
             return {
                 ...state,
@@ -40,27 +40,27 @@ export default function (state = initialState, action){
                 loading: !loadingState
             }
         case GET_ETH_DATA:
-            return{
+            return {
                 ...state,
                 eth: state.eth.concat(action.payload),
                 loading: !loadingState
             }
-        
-        case GET_DOGE_DATA: 
+
+        case GET_DOGE_DATA:
             return {
                 ...state,
                 doge: state.doge.concat(action.payload),
                 loading: !loadingState
             }
-        case GET_BNB_DATA: 
-        return {
-            ...state,
-            bnb: state.bnb.concat(action.payload),
-            loading: !loadingState
-        }
-        case CLEAN_STATE: 
-        return initialState
-        
+        case GET_BNB_DATA:
+            return {
+                ...state,
+                bnb: state.bnb.concat(action.payload),
+                loading: !loadingState
+            }
+        case CLEAN_STATE:
+            return initialState
+
         default: return state
     }
 }
